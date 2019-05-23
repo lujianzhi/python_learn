@@ -1,6 +1,7 @@
 import function_py as t1  # 导包并且别名
 import sys
-sys.path[0] = '/home/ian/development/python/project/python_learn/sub' # 为了找到另外文件夹下的模块,修改路径
+sys.path[
+    0] = '/home/ian/development/python/project/python_learn/sub'  # 为了找到另外文件夹下的模块,修改路径
 import sub_function_py as t2  # 导其他文件夹下的包并且别名
 
 # 第一个python项目
@@ -75,3 +76,16 @@ array = [1, 2, 3, 4, 5]
 
 print(t1.find_number(array, "5"))  # 使用导进来的包调用函数
 print(t2.find_number(array, "5"))  # 使用导进来的包调用函数
+
+
+class Box1():
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+    def say(self):
+        return "宽:%d;高:%d" % (self.width, self.height)
+
+
+box = Box1(1, 2)
+print(box.say())
